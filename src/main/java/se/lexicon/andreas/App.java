@@ -23,7 +23,7 @@ public class App
         BankAccount bengt = new BankAccount(accountNumberCounter++,0,"Bengt Bengtson", "bengt@epost.com", "033-3333");
 
         olle.deposit(20.0);
-        olle.getBalance();
+        System.out.println(olle.getCustomerName()+ " balance is " + olle.getBalance());
         sven.deposit(30.0);
         bengt.deposit(90.0);
         sven.withdraw(5);
@@ -31,5 +31,7 @@ public class App
         System.out.println(olle.getAccountNumber());
         System.out.println(sven.getAccountNumber());
         System.out.println(bengt.getAccountNumber());
+
+        olle.withdraw(21.0);
     }
 }
