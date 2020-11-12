@@ -12,6 +12,8 @@ package se.lexicon.andreas.BankAccount;
  */
 
 public class BankAccount {
+    static int counter=0;
+
    private int accountNumber;
    private double balance;
    private String customerName;
@@ -19,8 +21,8 @@ public class BankAccount {
    private String phoneNumber;
 
    // Constructor
-   public BankAccount (int accountNumber, double balance, String customerName, String email, String phoneNumber){
-        this.accountNumber = accountNumber;
+   public BankAccount (double balance, String customerName, String email, String phoneNumber){
+        this.accountNumber = ++counter;
         this.balance = balance;
         this.customerName = customerName;
         this.email = email;
@@ -46,7 +48,7 @@ public class BankAccount {
 
     //getters and setters
    public void setAccountNumber(int accountNumber){
-       this.accountNumber=accountNumber;
+       this.accountNumber=++counter;
    }
 
    public int getAccountNumber(){
